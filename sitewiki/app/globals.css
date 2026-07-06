@@ -1,0 +1,23 @@
+@import "tailwindcss";
+@config "../tailwind.config.ts";
+
+/* Tailwind v4: class 기반 다크모드 — html/body의 .dark 클래스로 dark: 변형 활성화 */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  html {
+    @apply bg-neutral-50 text-neutral-900 transition-colors duration-200;
+  }
+
+  html.dark {
+    @apply bg-neutral-900 text-neutral-100;
+  }
+
+  body {
+    @apply min-h-full bg-neutral-50 transition-colors duration-200;
+  }
+
+  html.dark body {
+    @apply bg-neutral-900;
+  }
+}
