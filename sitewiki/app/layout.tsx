@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "웹위키 | WebWiki",
+  title: "한국 웹사이트 검색",
   description: "한국의 다양한 웹사이트를 한 곳에서 검색하고 발견하세요.",
 };
 
