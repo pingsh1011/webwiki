@@ -91,8 +91,8 @@ const koreanSearchMap: { [key: string]: string } = {
   "Agoda": "아고다"
 };
 
-const THEME_STORAGE_KEY = "webwiki-theme";
-const BOOKMARKS_STORAGE_KEY = "webwiki-bookmarks";
+const THEME_STORAGE_KEY = "sitewiki-theme";
+const BOOKMARKS_STORAGE_KEY = "sitewiki-bookmarks";
 
 function normalizeSiteId(id: string | number): string {
   return String(id);
