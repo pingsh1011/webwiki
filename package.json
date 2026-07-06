@@ -1,5 +1,10 @@
 {
-  "dependencies": {
-    "@supabase/supabase-js": "^2.110.0"
+  "name": "webwiki",
+  "private": true,
+  "scripts": {
+    "dev": "npm run dev --prefix sitewiki",
+    "build": "npm run build --prefix sitewiki",
+    "start": "npm run start --prefix sitewiki",
+    "lint": "npm run lint --prefix sitewiki"
   }
 }
