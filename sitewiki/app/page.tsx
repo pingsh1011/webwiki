@@ -1,10 +1,19 @@
 // 🚨 점 세 개(.../)로 되어 있던 부분을 점 두 개(../)로 정상 수정했습니다!
-import { supabase } from "../lib/supabase"; 
+import { getSupabase } from "../lib/supabase";
 import { SiteExplorer } from "../components/site-explorer";
 import { Hero } from "../components/hero";
-export const revalidate = 0; 
+
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
 async function getSites() {
+  const supabase = getSupabase();
+
+  if (!supabase) {
+    console.error("🔥 Supabase 환경 변수가 설정되지 않았습니다.");
+    return [];
+  }
+
   const { data, error } = await supabase.from("sites").select("*");
   if (error) {
     console.error("🔥 Supabase 데이터 가져오기 실패:", error.message);
